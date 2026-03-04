@@ -2,14 +2,14 @@
 
 import { useSearchParams } from 'next/navigation';
 import { login } from './actions';
+import { Suspense } from 'react';
 
-export default function LoginPage() {
+function LoginContent() {
   const searchParams = useSearchParams();
   const error = searchParams.get('error');
 
   return (
-    <main className="min-h-screen bg-black text-white flex items-center justify-center p-6 bg-gradient-to-br from-black via-zinc-900 to-black">
-      <div className="w-full max-w-md animate-fade-in">
+    <div className="w-full max-w-md animate-fade-in">
         <div className="text-center mb-10">
           <div className="inline-block px-3 py-1 rounded-full bg-accent/10 border border-accent/20 text-accent text-[10px] uppercase tracking-[0.3em] font-bold mb-6">
             Admin Portal
@@ -64,6 +64,15 @@ export default function LoginPage() {
           &copy; {new Date().getFullYear()} David's Betta Care Paete
         </p>
       </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <main className="min-h-screen bg-black text-white flex items-center justify-center p-6 bg-gradient-to-br from-black via-zinc-900 to-black">
+      <Suspense fallback={<div className="text-center text-muted">Loading...</div>}>
+        <LoginContent />
+      </Suspense>
     </main>
   );
 }
