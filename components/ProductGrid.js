@@ -70,37 +70,42 @@ export default function ProductGrid() {
           No featured specimens currently available. Check back soon.
         </div>
       ) : (
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10">
           {products.slice(0, 4).map((product, index) => (
             <div 
               key={product.id} 
-              className="group animate-fade-in"
+              className="group animate-fade-in flex flex-col items-center text-center"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="aspect-square bg-white/5 overflow-hidden border border-white/5 relative mb-4">
+              <div className="w-full aspect-square bg-white/5 overflow-hidden rounded-[2.5rem] border-2 border-white/5 relative mb-6 transition-all duration-500 group-hover:border-accent/30 group-hover:shadow-[0_20px_50px_rgba(251,129,34,0.15)]">
                 <img 
                   src={product.image_url} 
                   alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   onError={(e) => {
                     e.currentTarget.src = 'https://placehold.co/600x600/1a1a1a/ffffff?text=Premium+Betta';
                   }}
                 />
-                <div className="absolute top-4 right-4 bg-accent text-[10px] px-2 py-1 text-white uppercase font-bold tracking-tighter shadow-lg">
+                <div className="absolute top-4 right-4 bg-accent text-[10px] px-3 py-1.5 text-white uppercase font-black tracking-widest rounded-full shadow-lg animate-bounce">
                   Sale
                 </div>
               </div>
-              <h3 className="text-sm md:text-base font-serif mb-1 tracking-wider">{product.name}</h3>
-              <p className="text-accent font-bold text-sm">{product.price}</p>
-              {product.shopee_link && (
+              <h3 className="text-lg md:text-xl font-serif mb-2 tracking-wider group-hover:text-accent transition-colors">{product.name}</h3>
+              <p className="text-accent font-black text-lg mb-3">
+                <span className="text-muted text-xs font-normal line-through mr-2 opacity-50">₱2,500</span>
+                {product.price}
+              </p>
+              {product.shopee_link ? (
                 <a 
                   href={product.shopee_link} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="mt-2 text-[10px] text-muted hover:text-white uppercase tracking-widest inline-block border-b border-white/10"
+                  className="btn-primary text-[10px] px-6 py-2 tracking-[0.2em]"
                 >
-                  View on Shopee
+                  Buy Now
                 </a>
+              ) : (
+                <div className="text-[10px] text-muted uppercase tracking-[0.2em] opacity-40">Coming Soon</div>
               )}
             </div>
           ))}

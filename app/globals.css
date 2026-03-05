@@ -13,9 +13,11 @@
 :root {
   --background: #000000;
   --foreground: #ffffff;
-  --accent: #B32221;
+  --accent: #FB8122; /* Logo Orange */
+  --accent-hover: #ff9d4d;
   --secondary: #0F0F0F;
   --muted: #A0A0A0;
+  --radius-playful: 2rem;
 }
 
 @theme inline {
@@ -26,6 +28,7 @@
   --color-muted: var(--muted);
   --font-serif: "Tenor Sans", serif;
   --font-sans: "Outfit", sans-serif;
+  --radius-playful: var(--radius-playful);
 }
 
 body {
@@ -45,17 +48,20 @@ h1, h2, h3, h4, .premium-text {
 .btn-primary {
   background-color: var(--accent);
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 2rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   border: none;
   cursor: pointer;
+  border-radius: var(--radius-playful);
 }
 
 .btn-primary:hover {
-  opacity: 0.9;
+  background-color: var(--accent-hover);
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 10px 20px rgba(251, 129, 34, 0.3);
 }
 
 /* Animations */

@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 
@@ -24,10 +25,20 @@ export default function Navbar() {
   }, [supabase.auth]);
 
   return (
-    <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 px-6 py-4">
+    <nav className="fixed w-full z-50 bg-black/80 backdrop-blur-md border-b border-white/5 px-6 py-3 transition-all duration-300">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <Link href="/" className="text-xl md:text-2xl font-serif tracking-tighter text-white">
-          DAVID'S <span className="text-accent italic">BETTA CARE</span>
+        <Link href="/" className="flex items-center gap-3 transition-transform hover:scale-105 active:scale-95 group">
+          <div className="relative w-10 h-10 md:w-12 md:h-12 overflow-hidden rounded-full border-2 border-accent">
+            <Image 
+              src="/logo.jpg" 
+              alt="David's Betta Care Logo" 
+              fill
+              className="object-cover"
+            />
+          </div>
+          <span className="text-lg md:text-xl font-serif tracking-tighter text-white uppercase">
+            David's <span className="text-accent italic group-hover:text-accent-hover transition-colors">Betta Care</span>
+          </span>
         </Link>
 
         {/* Desktop Menu */}

@@ -3,24 +3,24 @@ export default function Footer() {
     <footer className="bg-black py-20 px-6 border-t border-white/5">
       <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-16 md:gap-8">
         <div className="animate-fade-in">
-          <h3 className="text-2xl font-serif mb-6 text-white">David's <span className="text-accent">Betta Care</span></h3>
-          <p className="text-muted text-sm leading-relaxed max-w-xs mb-8">
+          <h3 className="text-3xl font-serif mb-6 text-white uppercase tracking-tighter">David's <span className="text-accent">Betta Care</span></h3>
+          <p className="text-muted text-sm leading-relaxed max-w-xs mb-8 font-light">
             The Philippines' premier source for high-quality, competition-grade Betta fish. 
             Directly from Paete's finest breeders.
           </p>
-          <div className="flex gap-4">
-            <a href="https://www.facebook.com/Davidsbettacare" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-accent transition-colors">
-              <span className="text-xs">FB</span>
+          <div className="flex gap-6">
+            <a href="https://www.facebook.com/Davidsbettacare" className="group w-12 h-12 rounded-2xl border-2 border-white/10 flex items-center justify-center hover:border-accent hover:bg-accent/10 transition-all duration-300">
+              <span className="text-xs font-bold group-hover:text-accent">FB</span>
             </a>
-            <a href="https://shopee.ph/davidstalisayonline" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:border-accent transition-colors">
-              <span className="text-xs">SP</span>
+            <a href="https://shopee.ph/davidstalisayonline" className="group w-12 h-12 rounded-2xl border-2 border-white/10 flex items-center justify-center hover:border-accent hover:bg-accent/10 transition-all duration-300">
+              <span className="text-xs font-bold group-hover:text-accent">SP</span>
             </a>
           </div>
         </div>
 
         <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-accent mb-8">Location</h4>
-          <p className="text-muted text-sm leading-relaxed">
+          <h4 className="text-[10px] uppercase tracking-[0.4em] font-black text-accent mb-8 bg-accent/5 py-1 px-3 rounded-full w-fit">Location</h4>
+          <p className="text-muted text-sm leading-relaxed font-light">
             Paete Town Bridge, <br />
             9F7H+HMF, Paete, Laguna <br />
             Philippines
@@ -28,9 +28,9 @@ export default function Footer() {
         </div>
 
         <div className="animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <h4 className="text-xs uppercase tracking-[0.3em] font-bold text-accent mb-8">Contact</h4>
-          <p className="text-muted text-sm mb-4">Messenger: David's Betta Care</p>
-          <p className="text-muted text-sm mb-4">Available via Shopee for secure checkout.</p>
+          <h4 className="text-[10px] uppercase tracking-[0.4em] font-black text-accent mb-8 bg-accent/5 py-1 px-3 rounded-full w-fit">Contact</h4>
+          <p className="text-white text-sm mb-4 font-serif">Messenger: David's Betta Care</p>
+          <p className="text-muted text-sm mb-4 font-light">Available via Shopee for secure checkout.</p>
         </div>
       </div>
 

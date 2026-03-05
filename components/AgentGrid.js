@@ -20,7 +20,7 @@ export default function AgentGrid() {
           href={agent.url} 
           target="_blank" 
           rel="noopener noreferrer"
-          className="group relative block aspect-[4/5] overflow-hidden bg-black border border-white/5 animate-fade-in"
+          className="group relative block aspect-[4/5] overflow-hidden bg-secondary rounded-[2rem] border border-white/5 animate-fade-in transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/20"
           style={{ animationDelay: `${index * 0.1}s` }}
         >
           <img 
@@ -28,9 +28,10 @@ export default function AgentGrid() {
             alt={agent.name}
             className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
           />
-          <div className="absolute inset-x-0 bottom-0 p-4 bg-gradient-to-t from-black to-transparent">
-            <p className="text-white text-sm md:text-base font-serif uppercase tracking-wider">{agent.name}</p>
-            <p className="text-accent text-[10px] uppercase tracking-widest mt-1 group-hover:opacity-100 opacity-60 transition-opacity">
+          <div className="absolute inset-x-0 bottom-0 p-6 bg-gradient-to-t from-black via-black/80 to-transparent">
+            <p className="text-white text-base md:text-lg font-serif uppercase tracking-wider mb-1">{agent.name}</p>
+            <p className="text-accent text-[10px] uppercase tracking-[0.2em] font-bold group-hover:opacity-100 opacity-70 transition-opacity flex items-center gap-2">
+              <span className="w-1.5 h-1.5 rounded-full bg-accent animate-pulse"></span>
               Contact on Facebook
             </p>
           </div>
