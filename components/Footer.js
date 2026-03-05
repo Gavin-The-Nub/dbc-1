@@ -9,11 +9,11 @@ export default function Footer() {
             Directly from Paete's finest breeders.
           </p>
           <div className="flex gap-6">
-            <a href="https://www.facebook.com/Davidsbettacare" className="group w-12 h-12 rounded-2xl border-2 border-white/10 flex items-center justify-center hover:border-accent hover:bg-accent/10 transition-all duration-300">
-              <span className="text-xs font-bold group-hover:text-accent">FB</span>
+            <a href="https://www.facebook.com/Davidsbettacare" className="group w-12 h-12 rounded-2xl border-2 border-white/10 flex items-center justify-center hover:border-[#1877f2] hover:bg-[#1877f2]/10 transition-all duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/2021_Facebook_icon.svg" alt="Facebook" className="w-6 h-6 object-contain transition-all duration-300" />
             </a>
-            <a href="https://shopee.ph/davidstalisayonline" className="group w-12 h-12 rounded-2xl border-2 border-white/10 flex items-center justify-center hover:border-accent hover:bg-accent/10 transition-all duration-300">
-              <span className="text-xs font-bold group-hover:text-accent">SP</span>
+            <a href="https://shopee.ph/davidstalisayonline" className="group w-12 h-12 rounded-2xl border-2 border-white/10 flex items-center justify-center hover:border-[#ee4d2d] hover:bg-[#ee4d2d]/10 transition-all duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Shopee_logo.svg" alt="Shopee" className="w-6 h-6 object-contain transition-all duration-300" />
             </a>
           </div>
         </div>
